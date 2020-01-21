@@ -8,5 +8,5 @@ CREATE TABLE lembretes.lembrete
    conteudo character varying(255) NOT NULL,
    arquivado BOOLEAN,
    prioridade character varying(20) CHECK ( prioridade in ('BAIXA', 'MEDIA', 'ALTA')) NOT NULL,
-   modificado INTEGER
+   modificado BIGINT
 );

@@ -39,6 +39,6 @@ public class Lembrete {
 	private Prioridade prioridade;
 	
 	@Column(name = "modificado")
-	private Integer modificado;
+	private Long modificado;
 	
 }
