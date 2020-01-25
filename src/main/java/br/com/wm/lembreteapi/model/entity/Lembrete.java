@@ -30,15 +30,9 @@ public class Lembrete {
 	
 	@Column(name = "conteudo")
 	private String conteudo;
-	
-	@Column(name = "arquivado")
-	private Boolean arquivado;
 
 	@Column(name = "prioridade")
 	@Enumerated(value = EnumType.STRING)
 	private Prioridade prioridade;
-	
-	@Column(name = "modificado")
-	private Long modificado;
 	
 }

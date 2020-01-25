@@ -83,9 +83,7 @@ public class LembreteResource {
 		return LembreteDTO.builder()
 				.id(lembrete.getId())
 				.conteudo(lembrete.getConteudo())
-				.arquivado(lembrete.getArquivado())
 				.prioridade(lembrete.getPrioridade().name())
-				.modificado(lembrete.getModificado())
 				.build();
 	}
 	
@@ -94,8 +92,6 @@ public class LembreteResource {
 		
 		lembrete.setId(dto.getId());
 		lembrete.setConteudo(dto.getConteudo());
-		lembrete.setArquivado(dto.getArquivado());
-		lembrete.setModificado(dto.getModificado());
 		
 		if(dto.getPrioridade() != null) {
 			lembrete.setPrioridade(Prioridade.valueOf(dto.getPrioridade()));

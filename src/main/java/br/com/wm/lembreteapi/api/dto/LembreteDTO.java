@@ -15,8 +15,6 @@ public class LembreteDTO {
 	
 	private Long id;
 	private String conteudo;
-	private Boolean arquivado;
 	private String prioridade;
-	private Long modificado;
 
 }
