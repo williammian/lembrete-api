@@ -1,0 +1,15 @@
+Gerar jar executável do projeto back-end
+
+Entrar na pasta raiz do projeto
+
+Executar o seguinte comando:
+mvn package
+
+Entrar na pasta target
+Executar: 
+
+(desenvolvimento)
+java -jar lembrete-api-0.0.1-SNAPSHOT.jar
+
+(producao)
+java -Dspring.profiles.active=prod -jar lembrete-api-0.0.1-SNAPSHOT.jar
