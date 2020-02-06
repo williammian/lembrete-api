@@ -1,8 +1,6 @@
 CREATE DATABASE lembretes
 
-CREATE SCHEMA lembretes 
-
-CREATE TABLE lembretes.lembrete
+CREATE TABLE lembrete
 (
    id bigserial NOT NULL PRIMARY KEY,
    conteudo character varying(255) NOT NULL,

@@ -1,0 +1,19 @@
+//gerando imagem docker da api
+//executar o comando dentro da pasta onde se encontra o Dockerfile
+docker build -t lembrete-api-docker .
+
+//rodando o postgre no docker
+docker run -p 5432:5432 --name lembrete-postgres-docker -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=lembretes -d postgres:10.5-alpine
+
+//criando uma rede docker de comunicacao
+docker network create lembrete-net
+
+//colocando o postgre para rodar dentro da rede
+docker network connect lembrete-net lembrete-postgres-docker
+
+//comando para rodar imagem do sistema com docker
+docker run -p 8082:8082 --rm --network lembrete-net -e APP_OPTIONS='--spring.datasource.url=jdbc:postgresql://lembrete-postgres-docker:5432/lembretes' lembrete-api-docker
+
+ou
+docker run -p 8082:8082 --rm --network lembrete-net lembrete-api-docker
+
