@@ -1,0 +1,19 @@
+version: '3.0'
+services:
+    web:
+      image: lembrete-api-docker:latest
+      ports:
+          - 8082:8082
+      depends_on:
+          - db
+    db:
+      container_name: lembrete-postgres-docker
+      image: postgres:10.5-alpine
+      volumes:
+          - C:\teste\lembrete\bd
+      environment:
+          - POSTGRES_PASSWORD=postgres
+          - POSTGRES_USER=postgres
+          - POSTGRES_DB=lembretes
+      ports:
+          - 5432:5432

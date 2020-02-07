@@ -1,0 +1,7 @@
+//executar o comando dentro da pasta onde se encontra o docker-compose.yml
+docker-compose -f docker-compose.yml up
+
+//lembrar de criar a pasta C:\teste\lembrete\bd no Oracle VM VirtualBox
+
+//executar o seguinte comando para aceitar a sintaxe de pasta do Windows
+export COMPOSE_CONVERT_WINDOWS_PATHS="true"

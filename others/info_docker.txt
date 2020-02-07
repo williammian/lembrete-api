@@ -6,6 +6,7 @@ docker build -t lembrete-api-docker .
 docker run -p 5432:5432 --name lembrete-postgres-docker -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=lembretes -d postgres:10.5-alpine
 
 //ou rodando o postgre no docker com volume permanente
+//lembrar de criar a pasta C:\teste\lembrete\bd no Oracle VM VirtualBox
 docker run -p 5432:5432 --name lembrete-postgres-docker -v "C:\teste\lembrete\bd" -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=lembretes -d postgres:10.5-alpine
 
 //criando uma rede docker de comunicacao
@@ -24,6 +25,7 @@ docker run -p 8082:8082 --rm --network lembrete-net lembrete-api-docker
 
 //ou somente
 //rodando o postgre no docker com volume permanente
+//lembrar de criar a pasta C:\teste\lembrete\bd no Oracle VM VirtualBox
 docker run -p 5432:5432 --name lembrete-postgres-docker -v "C:\teste\lembrete\bd" -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=lembretes -d postgres:10.5-alpine
 
 //rodando imagem do sistema com docker
